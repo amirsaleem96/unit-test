@@ -1,8 +1,8 @@
-import { SAVE_COMMENTS } from '../src/actions/types';
+import { SAVE_COMMENT } from '../actions/types';
 
 export default function( state = [], action ) {
     switch(action.type) {
-        case SAVE_COMMENTS: return [ ...state, action.payload ];
+        case SAVE_COMMENT: return [ ...state, action.payload ];
     }
     return state;
 }

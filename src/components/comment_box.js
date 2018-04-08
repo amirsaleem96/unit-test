@@ -39,4 +39,4 @@ function mapDispatchToProps( dispatch ) {
     return bindActionCreators({ saveComment }, dispatch);
 }
 
-export default connect(mapStateToProps, actions)(CommentBox);
+export default connect(null, actions)(CommentBox);

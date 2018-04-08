@@ -5,7 +5,7 @@ import { saveComment } from '../../src/actions/';
 describe('actions', () => {
 
     describe('saveComments', () => {
-        
+
         let action;
         it('has the correct type', () => {
             action = saveComment();

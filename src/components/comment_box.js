@@ -4,15 +4,26 @@ class CommentBox extends Component {
     constructor(props){
         super(props);
         this.state = {
-
+            comment: ''
         }
+    }
+    handleChange(e) {
+        this.setState({
+            comment: e.target.value
+        })
+    }
+    handleSubmit(e) {
+        e.preventDefault();
+        this.setState({
+            comment: ''
+        })
     }
     render(){
         return(
-            <div className = 'comment-box'>
-               <textarea></textarea>
-               <button>Submit</button> 
-            </div>
+            <form onSubmit = {this.handleSubmit.bind(this)} className = 'comment-box'>
+               <textarea onChange = {this.handleChange.bind(this)} value = {this.state.comment}/>
+               <button action = "submit">Submit</button> 
+            </form>
         )
     }
 }
